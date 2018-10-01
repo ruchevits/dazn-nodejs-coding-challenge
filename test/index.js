@@ -3,6 +3,7 @@
 const { expect } = require('chai')
 const loadtest = require('loadtest')
 
+const BASE_URL = `http://localhost:${process.env.PORT}`
 const MAX_REQUESTS = 3
 
 describe('Streams', () => {
@@ -12,7 +13,7 @@ describe('Streams', () => {
     it('should not restrict concurrent connections', async () => {
 
       const result = await simulateWatchStream({
-        url: 'http://localhost:8080',
+        url: `${BASE_URL}/`,
         maxRequests: MAX_REQUESTS,
         concurrency: 10,
         headers: {
@@ -30,7 +31,7 @@ describe('Streams', () => {
     it('should allow three concurrent connections', async () => {
 
       const result = await simulateWatchStream({
-        url: 'http://localhost:8080/streams/1',
+        url: `${BASE_URL}/streams/1`,
         maxRequests: MAX_REQUESTS,
         concurrency: 3,
         headers: {
@@ -45,7 +46,7 @@ describe('Streams', () => {
     it('should not allow more than three concurrent connections', async () => {
 
       const result = await simulateWatchStream({
-        url: 'http://localhost:8080/streams/1',
+        url: `${BASE_URL}/streams/1`,
         maxRequests: MAX_REQUESTS,
         concurrency: 4,
         headers: {
