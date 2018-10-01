@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node src",
+    "start": "PORT=8080 node src",
     "test": "mocha test"
   },
   "author": "Edward Ruchevits",
