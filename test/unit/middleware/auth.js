@@ -25,4 +25,5 @@ describe('Auth Middleware', () => {
     expect(req).to.not.have.property('username')
 
   })
+
 })

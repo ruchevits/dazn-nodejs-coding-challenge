@@ -24,6 +24,7 @@ describe('Streams API', () => {
       expect(result.totalErrors).to.equal(0)
 
     })
+
   })
 
   describe('GET /streams/:id', () => {
@@ -57,6 +58,7 @@ describe('Streams API', () => {
       expect(result.totalErrors).to.equal(MAX_REQUESTS)
 
     })
+
   })
 
 })
