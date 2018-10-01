@@ -1,0 +1,15 @@
+{
+  "name": "dazn-nodejs-coding-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src",
+    "test": "mocha test"
+  },
+  "author": "Edward Ruchevits",
+  "private": true
+}
