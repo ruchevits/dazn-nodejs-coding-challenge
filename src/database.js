@@ -3,8 +3,6 @@
 module.exports = {
   connections: {},
   streams: {
-    1: 'exercise.mp4',
-    2: 'pushups.mp4',
-    3: 'runner.mp4',
+    1: 'big_buck_bunny.mp4',
   },
 }

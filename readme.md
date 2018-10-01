@@ -22,6 +22,4 @@ npm start
 
 | URL | Title | Length |
 | --- | ----- | ------ |
-| `http://localhost:8080/streams/1` | Exercise | 0:29 |
-| `http://localhost:8080/streams/2` | Push-ups | 0:24 |
-| `http://localhost:8080/streams/3` | Runner | 0:29 |
+| `http://localhost:8080/streams/1` | Big Buck Bunny | 1:00 |
