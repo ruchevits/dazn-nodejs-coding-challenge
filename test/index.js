@@ -6,7 +6,7 @@ const loadtest = require('loadtest')
 const BASE_URL = `http://localhost:${process.env.PORT}`
 const MAX_REQUESTS = 3
 
-describe('Streams', () => {
+describe('Streams API', () => {
 
   describe('GET /', () => {
 

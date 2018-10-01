@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "PORT=8080 node src",
-    "test": "PORT=8080 mocha test"
+    "test": "PORT=8080 mocha test --timeout 20000"
   },
   "author": "Edward Ruchevits",
   "private": true,

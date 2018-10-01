@@ -6,8 +6,6 @@ const MAX_CONCURRENT_STREAMS = 3
 
 module.exports = (req, res, next) => {
 
-  console.log(req.username)
-
   if (!req.username) {
     throw new Error('User must be authenticated')
   }

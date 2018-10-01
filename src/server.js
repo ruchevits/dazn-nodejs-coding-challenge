@@ -6,6 +6,7 @@ const middleware = require('./middleware')
 
 const server = express()
 
+server.use(middleware.logging)
 server.use(middleware.auth)
 
 server.use('/', routes.main)
