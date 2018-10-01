@@ -14,8 +14,15 @@ API requires basic authorization header to be set. Password is ignored, and user
 
 ```bash
 npm install
-npm test
 npm start
+```
+
+## Tests
+
+Make sure that the server is running, then run:
+
+```bash
+npm test
 ```
 
 ### Available streams
