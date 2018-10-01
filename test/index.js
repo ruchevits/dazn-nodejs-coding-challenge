@@ -8,7 +8,7 @@ const MAX_REQUESTS = 3
 
 describe('Streams', () => {
 
-  describe('GET /streams/:id', () => {
+  describe('GET /', () => {
 
     it('should not restrict concurrent connections', async () => {
 
@@ -17,7 +17,7 @@ describe('Streams', () => {
         maxRequests: MAX_REQUESTS,
         concurrency: 10,
         headers: {
-          'Authorization': 'Basic YWxpY2U6YWxpY2U=',
+          'Authorization': 'Basic YWxpY2U6YWxpY2U=', // alice:alice
         }
       })
 
@@ -35,7 +35,7 @@ describe('Streams', () => {
         maxRequests: MAX_REQUESTS,
         concurrency: 3,
         headers: {
-          'Authorization': 'Basic YWxpY2U6YWxpY2U=',
+          'Authorization': 'Basic YWxpY2U6YWxpY2U=', // alice:alice
         }
       })
 
@@ -50,7 +50,7 @@ describe('Streams', () => {
         maxRequests: MAX_REQUESTS,
         concurrency: 4,
         headers: {
-          'Authorization': 'Basic Ym9iOmJvYg==',
+          'Authorization': 'Basic Ym9iOmJvYg==', // bob:bob
         }
       })
 
