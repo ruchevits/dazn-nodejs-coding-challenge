@@ -11,5 +11,8 @@
     "test": "mocha test"
   },
   "author": "Edward Ruchevits",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
