@@ -1,7 +1,7 @@
 'use strict'
 
 const { expect } = require('chai')
-const loadtest = require('loadtest')
+const { simulateRequest } = require('../utils')
 
 const BASE_URL = `http://localhost:${process.env.PORT}`
 const MAX_REQUESTS = 3
@@ -12,7 +12,7 @@ describe('Streams API', () => {
 
     it('should not restrict concurrent connections', async () => {
 
-      const result = await simulateWatchStream({
+      const result = await simulateRequest({
         url: `${BASE_URL}/`,
         maxRequests: MAX_REQUESTS,
         concurrency: 10,
@@ -30,7 +30,7 @@ describe('Streams API', () => {
 
     it('should allow three concurrent connections', async () => {
 
-      const result = await simulateWatchStream({
+      const result = await simulateRequest({
         url: `${BASE_URL}/streams/1`,
         maxRequests: MAX_REQUESTS,
         concurrency: 3,
@@ -45,7 +45,7 @@ describe('Streams API', () => {
 
     it('should not allow more than three concurrent connections', async () => {
 
-      const result = await simulateWatchStream({
+      const result = await simulateRequest({
         url: `${BASE_URL}/streams/1`,
         maxRequests: MAX_REQUESTS,
         concurrency: 4,
@@ -60,12 +60,3 @@ describe('Streams API', () => {
   })
 
 })
-
-function simulateWatchStream(options) {
-  return new Promise((resolve, reject) => {
-    loadtest.loadTest(options, (error, result) => {
-      if (error) return reject(error)
-      return resolve(result)
-    })
-  })
-}
